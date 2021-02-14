@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Resources;
 using ChangeImage.Properties;
 
 namespace ChangeImage.Classes
