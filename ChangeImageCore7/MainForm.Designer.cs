@@ -1,5 +1,5 @@
 ﻿
-namespace ChangeImage
+namespace ChangeImageCore7
 {
     partial class MainForm
     {
@@ -66,10 +66,10 @@ namespace ChangeImage
             // 
             // SelectFromAllImagesButton
             // 
-            this.SelectFromAllImagesButton.Location = new System.Drawing.Point(159, 33);
+            this.SelectFromAllImagesButton.Location = new System.Drawing.Point(159, 34);
             this.SelectFromAllImagesButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SelectFromAllImagesButton.Name = "SelectFromAllImagesButton";
-            this.SelectFromAllImagesButton.Size = new System.Drawing.Size(76, 31);
+            this.SelectFromAllImagesButton.Size = new System.Drawing.Size(75, 31);
             this.SelectFromAllImagesButton.TabIndex = 3;
             this.SelectFromAllImagesButton.Text = "Select";
             this.SelectFromAllImagesButton.UseVisualStyleBackColor = true;

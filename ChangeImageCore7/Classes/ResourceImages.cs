@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ChangeImage.Classes;
+﻿namespace ChangeImageCore7.Classes;
 
 /// <summary>
 /// Provides access to resource images by loading them once

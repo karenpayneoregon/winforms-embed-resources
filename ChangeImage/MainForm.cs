@@ -14,7 +14,7 @@ namespace ChangeImage
             Shown += OnShown;
         }
 
-        private void OnShown(object? sender, EventArgs e)
+        private void OnShown(object sender, EventArgs e)
         {
             var allImages = ResourceImages.Instance.Images();
             

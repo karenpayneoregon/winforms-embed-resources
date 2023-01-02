@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace ChangeImage.Classes;
+﻿namespace ChangeImageCore7.Classes;
 
 public class ResourceItem
 {
