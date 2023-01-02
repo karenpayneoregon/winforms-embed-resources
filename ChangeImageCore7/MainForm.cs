@@ -44,7 +44,7 @@ public partial class MainForm : Form
         if (AllImagesListBox.SelectedIndex <= -1) return;
 
         var item = (ResourceItem) AllImagesListBox.SelectedItem;
-        pictureBox1.SizeMode = item.IsIcon ? PictureBoxSizeMode.Normal : PictureBoxSizeMode.Zoom;
+        pictureBox1.SizeMode = item!.IsIcon ? PictureBoxSizeMode.Normal : PictureBoxSizeMode.Zoom;
         pictureBox1.Image = item.Image;
     }
 }

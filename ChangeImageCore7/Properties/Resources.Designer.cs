@@ -22,7 +22,7 @@ namespace ChangeImageCore7.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ChangeImageCore7.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ChangeImageCore7.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace ChangeImageCore7.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace ChangeImageCore7.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon agent2 {
+        public static System.Drawing.Icon agent2 {
             get {
                 object obj = ResourceManager.GetObject("agent2", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -73,7 +73,7 @@ namespace ChangeImageCore7.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon Chat {
+        public static System.Drawing.Icon Chat {
             get {
                 object obj = ResourceManager.GetObject("Chat", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -83,7 +83,7 @@ namespace ChangeImageCore7.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon Csharp {
+        public static System.Drawing.Icon Csharp {
             get {
                 object obj = ResourceManager.GetObject("Csharp", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -93,7 +93,7 @@ namespace ChangeImageCore7.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon DetailView {
+        public static System.Drawing.Icon DetailView {
             get {
                 object obj = ResourceManager.GetObject("DetailView", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -103,7 +103,7 @@ namespace ChangeImageCore7.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ErrorForm {
+        public static System.Drawing.Bitmap ErrorForm {
             get {
                 object obj = ResourceManager.GetObject("ErrorForm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +113,7 @@ namespace ChangeImageCore7.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon git1 {
+        public static System.Drawing.Icon git1 {
             get {
                 object obj = ResourceManager.GetObject("git1", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -123,7 +123,7 @@ namespace ChangeImageCore7.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Miata1 {
+        public static System.Drawing.Bitmap Miata1 {
             get {
                 object obj = ResourceManager.GetObject("Miata1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +133,7 @@ namespace ChangeImageCore7.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Miata2 {
+        public static System.Drawing.Bitmap Miata2 {
             get {
                 object obj = ResourceManager.GetObject("Miata2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +143,7 @@ namespace ChangeImageCore7.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Microsoft1 {
+        public static System.Drawing.Bitmap Microsoft1 {
             get {
                 object obj = ResourceManager.GetObject("Microsoft1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +153,7 @@ namespace ChangeImageCore7.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ready {
+        public static System.Drawing.Bitmap ready {
             get {
                 object obj = ResourceManager.GetObject("ready", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,7 +163,7 @@ namespace ChangeImageCore7.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Hello.
         /// </summary>
-        internal static string TextFile1 {
+        public static string TextFile1 {
             get {
                 return ResourceManager.GetString("TextFile1", resourceCulture);
             }

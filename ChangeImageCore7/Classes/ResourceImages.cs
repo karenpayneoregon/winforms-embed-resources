@@ -5,8 +5,7 @@
 /// </summary>
 public sealed class ResourceImages
 {
-    private static readonly Lazy<ResourceImages> Lazy =
-        new Lazy<ResourceImages>(() => new ResourceImages());
+    private static readonly Lazy<ResourceImages> Lazy = new(() => new ResourceImages());
 
     public static ResourceImages Instance => Lazy.Value;
 

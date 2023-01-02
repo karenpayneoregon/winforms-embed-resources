@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Globalization;
+using System.Resources;
 using ChangeImageCore7.Properties;
 
 namespace ChangeImageCore7.Classes;
@@ -63,7 +64,8 @@ public class ImageHelper
             var resourceSet = Resources
                 .ResourceManager
                 .GetResourceSet(CultureInfo.CurrentUICulture, true, true);
-                
+
+
             names.AddRange(
                 from DictionaryEntry dictionaryEntry in resourceSet 
                 where dictionaryEntry.Value is Image || dictionaryEntry.Value is Icon 
