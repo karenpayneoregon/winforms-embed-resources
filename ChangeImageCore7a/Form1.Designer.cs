@@ -29,22 +29,22 @@ partial class Form1
     private void InitializeComponent()
     {
             this.AllImagesListBox = new System.Windows.Forms.ListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AllImagesPictureBox = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.IconListBox = new System.Windows.Forms.ListBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.IconPictureBox = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.BitmapImagesListBox = new System.Windows.Forms.ListBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.BitmapPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.AllImagesPictureBox)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IconPictureBox)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BitmapPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // AllImagesListBox
@@ -56,14 +56,14 @@ partial class Form1
             this.AllImagesListBox.Size = new System.Drawing.Size(214, 204);
             this.AllImagesListBox.TabIndex = 1;
             // 
-            // pictureBox1
+            // AllImagesPictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(247, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(320, 204);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.AllImagesPictureBox.Location = new System.Drawing.Point(247, 15);
+            this.AllImagesPictureBox.Name = "AllImagesPictureBox";
+            this.AllImagesPictureBox.Size = new System.Drawing.Size(320, 204);
+            this.AllImagesPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AllImagesPictureBox.TabIndex = 2;
+            this.AllImagesPictureBox.TabStop = false;
             // 
             // tabControl1
             // 
@@ -80,7 +80,7 @@ partial class Form1
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.AllImagesListBox);
-            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.AllImagesPictureBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -92,7 +92,7 @@ partial class Form1
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.IconListBox);
-            this.tabPage2.Controls.Add(this.pictureBox2);
+            this.tabPage2.Controls.Add(this.IconPictureBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -110,19 +110,19 @@ partial class Form1
             this.IconListBox.Size = new System.Drawing.Size(214, 204);
             this.IconListBox.TabIndex = 7;
             // 
-            // pictureBox2
+            // IconPictureBox
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(249, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(320, 204);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.IconPictureBox.Location = new System.Drawing.Point(249, 6);
+            this.IconPictureBox.Name = "IconPictureBox";
+            this.IconPictureBox.Size = new System.Drawing.Size(320, 204);
+            this.IconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.IconPictureBox.TabIndex = 8;
+            this.IconPictureBox.TabStop = false;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.BitmapImagesListBox);
-            this.tabPage3.Controls.Add(this.pictureBox3);
+            this.tabPage3.Controls.Add(this.BitmapPictureBox);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -140,14 +140,14 @@ partial class Form1
             this.BitmapImagesListBox.Size = new System.Drawing.Size(214, 204);
             this.BitmapImagesListBox.TabIndex = 3;
             // 
-            // pictureBox3
+            // BitmapPictureBox
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(263, 18);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(320, 204);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            this.BitmapPictureBox.Location = new System.Drawing.Point(263, 18);
+            this.BitmapPictureBox.Name = "BitmapPictureBox";
+            this.BitmapPictureBox.Size = new System.Drawing.Size(320, 204);
+            this.BitmapPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BitmapPictureBox.TabIndex = 4;
+            this.BitmapPictureBox.TabStop = false;
             // 
             // Form1
             // 
@@ -159,26 +159,26 @@ partial class Form1
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Code sample";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllImagesPictureBox)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IconPictureBox)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BitmapPictureBox)).EndInit();
             this.ResumeLayout(false);
 
     }
 
     #endregion
     private ListBox AllImagesListBox;
-    private PictureBox pictureBox1;
+    private PictureBox AllImagesPictureBox;
     private TabControl tabControl1;
     private TabPage tabPage1;
     private TabPage tabPage2;
     private ListBox IconListBox;
-    private PictureBox pictureBox2;
+    private PictureBox IconPictureBox;
     private TabPage tabPage3;
     private ListBox BitmapImagesListBox;
-    private PictureBox pictureBox3;
+    private PictureBox BitmapPictureBox;
 }

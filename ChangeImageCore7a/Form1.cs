@@ -18,8 +18,7 @@ public partial class Form1 : Form
         Shown += OnShown;
     }
 
-
-    private void OnShown(object? sender, EventArgs e)
+    private void OnShown(object sender, EventArgs e)
     {
 
         _allBindingSource.DataSource = ResourceImages.Instance.Images().OrderBy(x => x.Name).ToList();
@@ -28,13 +27,23 @@ public partial class Form1 : Form
 
         ChangeFromAllImage();
 
-        _iconBindingSource.DataSource = ResourceImages.Instance.Images().Icons().OrderBy(x => x.Name).ToList();
+        _iconBindingSource.DataSource = ResourceImages.Instance
+            .Images()
+            .Icons()
+            .OrderBy(x => x.Name)
+            .ToList();
+
         IconListBox.DataSource = _iconBindingSource;
         _iconBindingSource.PositionChanged += IconBindingSource_PositionChanged;
 
         ChangeFromIconImage();
 
-        _bindingList = new BindingList<ResourceItem>(ResourceImages.Instance.Images().BitMaps().OrderBy(x => x.Name).ToList());
+        _bindingList = new BindingList<ResourceItem>(ResourceImages.Instance
+            .Images()
+            .BitMaps()
+            .OrderBy(x => x.Name)
+            .ToList());
+
         _bitmapBindingSource.DataSource = _bindingList;
         BitmapImagesListBox.DataSource = _bitmapBindingSource;
         _bitmapBindingSource.PositionChanged += BitmapBindingSource_PositionChanged;
@@ -43,7 +52,7 @@ public partial class Form1 : Form
          * Let's select a specific image
          * We use a BindingList as the BindingSource does not support the Find method
          */
-        var resourceItem =_bindingList.FirstOrDefault(x => x.Name == "ready");
+        var resourceItem =_bindingList.FirstOrDefault(x => x.Name == "Miata2");
         if (resourceItem != null) _bitmapBindingSource.Position = _bitmapBindingSource.IndexOf(resourceItem);
 
         ChangeFromBitmapImage();
@@ -65,16 +74,14 @@ public partial class Form1 : Form
         ChangeFromAllImage();
     }
 
-    /// <summary>
-    /// Change image and set the SizeMode of the PictureBox dependent on image type
-    /// </summary>
+
     private void ChangeFromAllImage()
     {
         if (AllImagesListBox.SelectedIndex <= -1) return;
 
         var item = (ResourceItem) _allBindingSource.Current;
-        pictureBox1.SizeMode = item!.IsIcon ? PictureBoxSizeMode.Normal : PictureBoxSizeMode.Zoom;
-        pictureBox1.Image = item.Image;
+        AllImagesPictureBox.SizeMode = item!.IsIcon ? PictureBoxSizeMode.Normal : PictureBoxSizeMode.Zoom;
+        AllImagesPictureBox.Image = item.Image;
     }
 
     private void ChangeFromIconImage()
@@ -82,15 +89,15 @@ public partial class Form1 : Form
         if (IconListBox.SelectedIndex <= -1) return;
 
         var item = (ResourceItem)_iconBindingSource.Current;
-        pictureBox2.SizeMode = item!.IsIcon ? PictureBoxSizeMode.Normal : PictureBoxSizeMode.Zoom;
-        pictureBox2.Image = item.Image;
+        IconPictureBox.SizeMode = item!.IsIcon ? PictureBoxSizeMode.Normal : PictureBoxSizeMode.Zoom;
+        IconPictureBox.Image = item.Image;
     }
     private void ChangeFromBitmapImage()
     {
         if (BitmapImagesListBox.SelectedIndex <= -1) return;
 
         var item = (ResourceItem)_bitmapBindingSource.Current;
-        pictureBox3.SizeMode = item!.IsIcon ? PictureBoxSizeMode.Normal : PictureBoxSizeMode.Zoom;
-        pictureBox3.Image = item.Image;
+        BitmapPictureBox.SizeMode = item!.IsIcon ? PictureBoxSizeMode.Normal : PictureBoxSizeMode.Zoom;
+        BitmapPictureBox.Image = item.Image;
     }
 }

@@ -14,10 +14,9 @@ public class ImageHelper
         var names = new List<string>();
         var resourceSet = manager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
 
-        names.AddRange(
-            from DictionaryEntry dictionaryEntry in resourceSet
-            where dictionaryEntry.Value is Image || dictionaryEntry.Value is Icon
-            select dictionaryEntry.Key.ToString());
+        names.AddRange(resourceSet!.Cast<DictionaryEntry>()
+            .Where(dictionaryEntry => dictionaryEntry.Value is Image || dictionaryEntry.Value is Icon)
+            .Select(dictionaryEntry => dictionaryEntry.Key.ToString()));
 
         return names;
     }
@@ -34,7 +33,11 @@ public class ImageHelper
         foreach (var name in ResourceImageNames(manager))
         {
 
-            var item = new ResourceItem() { Name = name, IsIcon = false };
+            var item = new ResourceItem()
+            {
+                Name = name, 
+                IsIcon = false
+            };
 
             if (manager!.GetObject(name) is Icon)
             {
