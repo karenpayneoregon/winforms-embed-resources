@@ -57,7 +57,8 @@ public partial class Form1 : Form
          * We use a BindingList as the BindingSource does not support the Find method
          */
         var resourceItem =_bindingList.FirstOrDefault(x => x.Name == "Miata2");
-        if (resourceItem != null) _bitmapBindingSource.Position = _bitmapBindingSource.IndexOf(resourceItem);
+        if (resourceItem != null) _bitmapBindingSource.Position = 
+            _bitmapBindingSource.IndexOf(resourceItem);
 
         ChangeFromBitmapImage();
 
