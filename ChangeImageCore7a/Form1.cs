@@ -1,11 +1,16 @@
+using System.Diagnostics;
+using System.Windows.Forms;
 using ChangeImageCore7a.Classes;
+using ResourceLibrary.Extensions;
 using ResourceLibrary.Models;
 
 namespace ChangeImageCore7a;
 
 public partial class Form1 : Form
 {
-    private readonly BindingSource _bindingSource = new ();
+    private readonly BindingSource _allBindingSource = new ();
+    private readonly BindingSource _iconBindingSource = new ();
+    private readonly BindingSource _bitmapBindingSource = new ();
 
     public Form1()
     {
@@ -13,21 +18,44 @@ public partial class Form1 : Form
         Shown += OnShown;
     }
 
-    /// <summary>
-    /// Get all images in this project resources to a <see cref="BindingSource"/> which
-    /// allows changing the image in pictureBox1 when the selected item in the ListBox changes
-    /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="e"></param>
+
     private void OnShown(object? sender, EventArgs e)
     {
-        _bindingSource.DataSource = ResourceImages.Instance.Images().OrderBy(x => x.Name).ToList();
-        AllImagesListBox.DataSource = _bindingSource;
-        _bindingSource.PositionChanged += BindingSource_PositionChanged;
+        _allBindingSource.DataSource = ResourceImages.Instance.Images().OrderBy(x => x.Name).ToList();
+        AllImagesListBox.DataSource = _allBindingSource;
+        _allBindingSource.PositionChanged += AllBindingSource_PositionChanged;
         ChangeFromAllImage();
+
+        _iconBindingSource.DataSource = ResourceImages.Instance.Images().Icons().OrderBy(x => x.Name).ToList();
+        IconListBox.DataSource = _iconBindingSource;
+        _iconBindingSource.PositionChanged += IconBindingSource_PositionChanged;
+        ChangeFromIconImage();
+
+        _bitmapBindingSource.DataSource = ResourceImages.Instance.Images().BitMaps().OrderBy(x => x.Name).ToList();
+        BitmapImagesListBox.DataSource = _bitmapBindingSource;
+        _bitmapBindingSource.PositionChanged += BitmapBindingSource_PositionChanged;
+
+        /*
+         * Let's select a specific image
+         */
+        ResourceItem item = _bitmapBindingSource.List.OfType<ResourceItem>().ToList().Find(f => f.Name == "ready");
+        _bitmapBindingSource.Position = _bitmapBindingSource.IndexOf(item);
+
+        ChangeFromBitmapImage();
+
     }
 
-    private void BindingSource_PositionChanged(object? sender, EventArgs e)
+    private void BitmapBindingSource_PositionChanged(object? sender, EventArgs e)
+    {
+        ChangeFromBitmapImage();
+    }
+
+    private void IconBindingSource_PositionChanged(object? sender, EventArgs e)
+    {
+        ChangeFromIconImage();
+    }
+
+    private void AllBindingSource_PositionChanged(object? sender, EventArgs e)
     {
         ChangeFromAllImage();
     }
@@ -39,8 +67,27 @@ public partial class Form1 : Form
     {
         if (AllImagesListBox.SelectedIndex <= -1) return;
 
-        var item = (ResourceItem) _bindingSource.Current;
+        var item = (ResourceItem) _allBindingSource.Current;
         pictureBox1.SizeMode = item!.IsIcon ? PictureBoxSizeMode.Normal : PictureBoxSizeMode.Zoom;
         pictureBox1.Image = item.Image;
     }
+
+    private void ChangeFromIconImage()
+    {
+        if (IconListBox.SelectedIndex <= -1) return;
+
+        var item = (ResourceItem)_iconBindingSource.Current;
+        pictureBox2.SizeMode = item!.IsIcon ? PictureBoxSizeMode.Normal : PictureBoxSizeMode.Zoom;
+        pictureBox2.Image = item.Image;
+    }
+    private void ChangeFromBitmapImage()
+    {
+        if (BitmapImagesListBox.SelectedIndex <= -1) return;
+
+        var item = (ResourceItem)_bitmapBindingSource.Current;
+        pictureBox3.SizeMode = item!.IsIcon ? PictureBoxSizeMode.Normal : PictureBoxSizeMode.Zoom;
+        pictureBox3.Image = item.Image;
+    }
 }
+
+
