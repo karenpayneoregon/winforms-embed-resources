@@ -1,6 +1,6 @@
 # About
 
-Provides code to read/display images from a Windows From project resource, in this case to a PictureBox.
+Provides code to read/display images from a Windows Form project resource, in this case to a PictureBox.
 
 - Method to get all icon and bitmaps into a single list.
 - Extension methods to separate icon and bitmaps from above list.

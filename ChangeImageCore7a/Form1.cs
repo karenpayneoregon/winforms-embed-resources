@@ -21,7 +21,11 @@ public partial class Form1 : Form
     private void OnShown(object sender, EventArgs e)
     {
 
-        _allBindingSource.DataSource = ResourceImages.Instance.Images().OrderBy(x => x.Name).ToList();
+        _allBindingSource.DataSource = ResourceImages.Instance
+            .Images()
+            .OrderBy(x => x.Name)
+            .ToList();
+
         AllImagesListBox.DataSource = _allBindingSource;
         _allBindingSource.PositionChanged += AllBindingSource_PositionChanged;
 

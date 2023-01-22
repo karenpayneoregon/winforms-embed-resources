@@ -15,7 +15,8 @@ public class ImageHelper
         var resourceSet = manager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
 
         names.AddRange(resourceSet!.Cast<DictionaryEntry>()
-            .Where(dictionaryEntry => dictionaryEntry.Value is Image || dictionaryEntry.Value is Icon)
+            .Where(dictionaryEntry => dictionaryEntry.Value is Image || 
+                                      dictionaryEntry.Value is Icon)
             .Select(dictionaryEntry => dictionaryEntry.Key.ToString()));
 
         return names;
@@ -26,7 +27,7 @@ public class ImageHelper
     /// Get all bitmap and icon resources
     /// </summary>
     /// <returns></returns>
-    public static List<ResourceItem> ResourceItemList(ResourceManager? manager)
+    public static List<ResourceItem> ResourceItemList(ResourceManager manager)
     {
         var items = new List<ResourceItem>();
 
