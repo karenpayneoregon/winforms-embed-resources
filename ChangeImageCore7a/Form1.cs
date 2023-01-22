@@ -1,6 +1,4 @@
 using System.ComponentModel;
-using System.Diagnostics;
-using System.Windows.Forms;
 using ChangeImageCore7a.Classes;
 using ResourceLibrary.Extensions;
 using ResourceLibrary.Models;
@@ -23,33 +21,30 @@ public partial class Form1 : Form
 
     private void OnShown(object? sender, EventArgs e)
     {
+
         _allBindingSource.DataSource = ResourceImages.Instance.Images().OrderBy(x => x.Name).ToList();
         AllImagesListBox.DataSource = _allBindingSource;
         _allBindingSource.PositionChanged += AllBindingSource_PositionChanged;
+
         ChangeFromAllImage();
 
         _iconBindingSource.DataSource = ResourceImages.Instance.Images().Icons().OrderBy(x => x.Name).ToList();
         IconListBox.DataSource = _iconBindingSource;
         _iconBindingSource.PositionChanged += IconBindingSource_PositionChanged;
+
         ChangeFromIconImage();
 
-        _bitmapBindingSource.DataSource = ResourceImages.Instance.Images().BitMaps().OrderBy(x => x.Name).ToList();
+        _bindingList = new BindingList<ResourceItem>(ResourceImages.Instance.Images().BitMaps().OrderBy(x => x.Name).ToList());
+        _bitmapBindingSource.DataSource = _bindingList;
         BitmapImagesListBox.DataSource = _bitmapBindingSource;
         _bitmapBindingSource.PositionChanged += BitmapBindingSource_PositionChanged;
 
         /*
          * Let's select a specific image
+         * We use a BindingList as the BindingSource does not support the Find method
          */
-        ResourceItem item = _bitmapBindingSource
-            .List
-            .OfType<ResourceItem>()
-            .ToList()
-            .Find(resourceImage => resourceImage.Name == "ready");
-
-
-
-
-        _bitmapBindingSource.Position = _bitmapBindingSource.IndexOf(item);
+        var resourceItem =_bindingList.FirstOrDefault(x => x.Name == "ready");
+        if (resourceItem != null) _bitmapBindingSource.Position = _bitmapBindingSource.IndexOf(resourceItem);
 
         ChangeFromBitmapImage();
 
@@ -99,5 +94,3 @@ public partial class Form1 : Form
         pictureBox3.Image = item.Image;
     }
 }
-
-
