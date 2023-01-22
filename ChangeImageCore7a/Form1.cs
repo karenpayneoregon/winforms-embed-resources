@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Windows.Forms;
 using ChangeImageCore7a.Classes;
@@ -11,6 +12,7 @@ public partial class Form1 : Form
     private readonly BindingSource _allBindingSource = new ();
     private readonly BindingSource _iconBindingSource = new ();
     private readonly BindingSource _bitmapBindingSource = new ();
+    private BindingList<ResourceItem> _bindingList = new();
 
     public Form1()
     {
@@ -38,7 +40,15 @@ public partial class Form1 : Form
         /*
          * Let's select a specific image
          */
-        ResourceItem item = _bitmapBindingSource.List.OfType<ResourceItem>().ToList().Find(f => f.Name == "ready");
+        ResourceItem item = _bitmapBindingSource
+            .List
+            .OfType<ResourceItem>()
+            .ToList()
+            .Find(resourceImage => resourceImage.Name == "ready");
+
+
+
+
         _bitmapBindingSource.Position = _bitmapBindingSource.IndexOf(item);
 
         ChangeFromBitmapImage();
