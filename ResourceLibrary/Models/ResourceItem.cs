@@ -1,14 +1,14 @@
 ﻿using System.Drawing;
 
 namespace ResourceLibrary.Models;
-public class ResourceContainer
+public class ResourceItem
 {
     /// <summary>
     /// Resource name
     /// </summary>
     public string Name { get; set; }
     /// <summary>
-    /// Image which is either an icon or bitmap
+    /// Image which is either an <see cref="Icon"/> or <see cref="Bitmap"/>
     /// </summary>
     public Bitmap Image { get; set; }
     /// <summary>

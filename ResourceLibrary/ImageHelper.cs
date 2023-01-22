@@ -27,16 +27,16 @@ public class ImageHelper
     /// Get all bitmap and icon resources
     /// </summary>
     /// <returns></returns>
-    public static List<ResourceContainer> ResourceItemList(ResourceManager manager)
+    public static List<ResourceItem> ResourceItemList(ResourceManager? manager)
     {
-        var items = new List<ResourceContainer>();
+        var items = new List<ResourceItem>();
 
         foreach (var name in ResourceImageNames(manager))
         {
 
-            var item = new ResourceContainer() { Name = name, IsIcon = false };
+            var item = new ResourceItem() { Name = name, IsIcon = false };
 
-            if (manager.GetObject(name) is Icon)
+            if (manager!.GetObject(name) is Icon)
             {
                 item.Image = ((Icon)manager.GetObject(name)!)?.ToBitmap();
                 item.IsIcon = true;

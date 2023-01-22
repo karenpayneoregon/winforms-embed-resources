@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Globalization;
-using System.Resources;
 using ChangeImageCore7.Properties;
 
 namespace ChangeImageCore7.Classes;
@@ -49,6 +48,7 @@ public class ImageHelper
         return items;
             
     }
+
     /// <summary>
     /// Get all resource names for icon and bitmaps
     /// </summary>
