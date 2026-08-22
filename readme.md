@@ -14,7 +14,7 @@ Provides code to read/display images from a Windows Form project resource, in th
 
 - **08/21/2026** move to NET10
 
-# Microsoft Technet 
+# Microsoft Technet (original source)
 
 https://social.technet.microsoft.com/wiki/contents/articles/54259.windows-forms-access-resources-by-name.aspx
 

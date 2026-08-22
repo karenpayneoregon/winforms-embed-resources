@@ -26,8 +26,7 @@ public class ImageHelper
         var resourceSet = manager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
 
         names.AddRange(resourceSet!.Cast<DictionaryEntry>()
-            .Where(dictionaryEntry => dictionaryEntry.Value is Image || 
-                                      dictionaryEntry.Value is Icon)
+            .Where(dictionaryEntry => dictionaryEntry.Value is Image or Icon)
             .Select(dictionaryEntry => dictionaryEntry.Key.ToString()));
 
         return names;
