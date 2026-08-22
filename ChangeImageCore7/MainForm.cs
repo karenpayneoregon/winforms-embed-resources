@@ -14,14 +14,14 @@ public partial class MainForm : Form
 
     private void OnShown(object sender, EventArgs e)
     {
-        var allImages = ResourceImages.Instance.Images();
+        List<ResourceItem> allImages = ResourceImages.Instance.Images();
             
         /*
          * Do we have images from resources?
          */
         if (allImages is null)
         {
-            MessageBox.Show("No images located");
+            MessageBox.Show(@"No images located");
             SelectFromAllImagesButton.Enabled = false;
         }
             
@@ -32,6 +32,10 @@ public partial class MainForm : Form
         IconListBox.DataSource = allImages.Icons();
 
         BitmapListBox.DataSource = allImages.BitMaps();
+        
+        
+        Icon = allImages.Icons().FirstOrDefault(x => x.Name == "Csharp")?.Icon;
+        
     }
 
     private void SelectFromAllImagesButton_Click(object sender, EventArgs e)

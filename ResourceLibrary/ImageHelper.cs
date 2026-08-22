@@ -6,7 +6,7 @@ using ResourceLibrary.Models;
 
 namespace ResourceLibrary;
 
-public class ImageHelper
+public static class ImageHelper
 {
     /// <summary>
     /// Retrieves the names of all resources in the specified <see cref="ResourceManager"/> 
@@ -19,7 +19,7 @@ public class ImageHelper
     /// This method filters resources to include only those that are either <see cref="Image"/> or <see cref="Icon"/>.
     /// The resource names are returned as strings.
     /// </remarks>
-    public static List<string> ResourceImageNames(ResourceManager manager)
+    public static List<string> ResourceImageNames(this ResourceManager manager)
     {
 
         var names = new List<string>();
@@ -47,11 +47,11 @@ public class ImageHelper
     /// Icon resources are converted to bitmaps before assignment, and the <see cref="ResourceItem.IsIcon"/> property
     /// is set to <c>true</c>.
     /// </remarks>
-    public static List<ResourceItem> ResourceItemList(ResourceManager manager)
+    public static List<ResourceItem> ResourceItemList(this ResourceManager manager)
     {
         var items = new List<ResourceItem>();
 
-        foreach (var name in ResourceImageNames(manager))
+        foreach (var name in manager.ResourceImageNames())
         {
 
             var item = new ResourceItem()

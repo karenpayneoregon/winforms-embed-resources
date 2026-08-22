@@ -61,6 +61,8 @@ public partial class Form1 : Form
             _bitmapBindingSource.IndexOf(resourceItem);
 
         ChangeFromBitmapImage();
+        
+        Icon = ResourceImages.Instance.Images().GetByName("csharp");
 
     }
 

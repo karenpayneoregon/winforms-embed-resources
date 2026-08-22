@@ -11,22 +11,29 @@ public class ImageHelper
 {
 
     /// <summary>
-    /// Get all bitmap and icon resources
+    /// Retrieves a list of resource items containing all bitmap and icon resources 
+    /// from the current project's resources, excluding specific entries like "ready".
     /// </summary>
-    /// <returns></returns>
+    /// <returns>
+    /// A list of <see cref="ResourceItem"/> objects, each representing a bitmap or icon resource.
+    /// </returns>
+    /// <remarks>
+    /// This method iterates through all resource names obtained from <see cref="ResourceImageNames"/> 
+    /// and creates a <see cref="ResourceItem"/> for each valid resource. 
+    /// If the resource is an icon, it is converted to a bitmap and marked as such.
+    /// </remarks>
+    /// <exception cref="InvalidCastException">
+    /// Thrown if a resource cannot be cast to <see cref="Bitmap"/> or <see cref="Icon"/>.
+    /// </exception>
     public static List<ResourceItem> ResourceItemList()
     {
         var items = new List<ResourceItem>();
 
         foreach (var name in ResourceImageNames())
         {
-            /*
-             * For this code sample ignore the default image
-             */
+
             if (name == "ready")
-            {
                 continue;
-            }
                 
             var item = new ResourceItem() {Name = name, IsIcon = false};
                 
@@ -68,7 +75,7 @@ public class ImageHelper
 
             names.AddRange(
                 from DictionaryEntry dictionaryEntry in resourceSet 
-                where dictionaryEntry.Value is Image || dictionaryEntry.Value is Icon 
+                where dictionaryEntry.Value is Image or Icon 
                 select dictionaryEntry.Key.ToString());
                 
             return names;

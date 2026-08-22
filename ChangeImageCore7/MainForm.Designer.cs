@@ -30,134 +30,124 @@ namespace ChangeImageCore7
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.AllImagesListBox = new System.Windows.Forms.ListBox();
-            this.SelectFromAllImagesButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.IconListBox = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.BitmapListBox = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            AllImagesListBox = new ListBox();
+            SelectFromAllImagesButton = new Button();
+            label1 = new Label();
+            IconListBox = new ListBox();
+            label2 = new Label();
+            BitmapListBox = new ListBox();
+            label3 = new Label();
+            groupBox1 = new GroupBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(267, 68);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(337, 205);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(234, 51);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(295, 154);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
             // AllImagesListBox
             // 
-            this.AllImagesListBox.FormattingEnabled = true;
-            this.AllImagesListBox.ItemHeight = 20;
-            this.AllImagesListBox.Location = new System.Drawing.Point(23, 68);
-            this.AllImagesListBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AllImagesListBox.Name = "AllImagesListBox";
-            this.AllImagesListBox.Size = new System.Drawing.Size(211, 204);
-            this.AllImagesListBox.TabIndex = 2;
+            AllImagesListBox.FormattingEnabled = true;
+            AllImagesListBox.Location = new Point(20, 51);
+            AllImagesListBox.Name = "AllImagesListBox";
+            AllImagesListBox.Size = new Size(185, 154);
+            AllImagesListBox.TabIndex = 2;
             // 
             // SelectFromAllImagesButton
             // 
-            this.SelectFromAllImagesButton.Location = new System.Drawing.Point(159, 34);
-            this.SelectFromAllImagesButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SelectFromAllImagesButton.Name = "SelectFromAllImagesButton";
-            this.SelectFromAllImagesButton.Size = new System.Drawing.Size(75, 31);
-            this.SelectFromAllImagesButton.TabIndex = 3;
-            this.SelectFromAllImagesButton.Text = "Select";
-            this.SelectFromAllImagesButton.UseVisualStyleBackColor = true;
-            this.SelectFromAllImagesButton.Click += new System.EventHandler(this.SelectFromAllImagesButton_Click);
+            SelectFromAllImagesButton.Location = new Point(139, 26);
+            SelectFromAllImagesButton.Name = "SelectFromAllImagesButton";
+            SelectFromAllImagesButton.Size = new Size(66, 23);
+            SelectFromAllImagesButton.TabIndex = 3;
+            SelectFromAllImagesButton.Text = "Select";
+            SelectFromAllImagesButton.UseVisualStyleBackColor = true;
+            SelectFromAllImagesButton.Click += SelectFromAllImagesButton_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Icons and Bitmaps";
+            label1.AutoSize = true;
+            label1.Location = new Point(20, 29);
+            label1.Name = "label1";
+            label1.Size = new Size(104, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Icons and Bitmaps";
             // 
             // IconListBox
             // 
-            this.IconListBox.FormattingEnabled = true;
-            this.IconListBox.ItemHeight = 20;
-            this.IconListBox.Location = new System.Drawing.Point(14, 363);
-            this.IconListBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.IconListBox.Name = "IconListBox";
-            this.IconListBox.Size = new System.Drawing.Size(211, 124);
-            this.IconListBox.Sorted = true;
-            this.IconListBox.TabIndex = 6;
+            IconListBox.FormattingEnabled = true;
+            IconListBox.Location = new Point(12, 272);
+            IconListBox.Name = "IconListBox";
+            IconListBox.Size = new Size(185, 94);
+            IconListBox.Sorted = true;
+            IconListBox.TabIndex = 6;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 335);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 20);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Icons only";
+            label2.AutoSize = true;
+            label2.Location = new Point(13, 251);
+            label2.Name = "label2";
+            label2.Size = new Size(61, 15);
+            label2.TabIndex = 7;
+            label2.Text = "Icons only";
             // 
             // BitmapListBox
             // 
-            this.BitmapListBox.FormattingEnabled = true;
-            this.BitmapListBox.ItemHeight = 20;
-            this.BitmapListBox.Location = new System.Drawing.Point(423, 361);
-            this.BitmapListBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BitmapListBox.Name = "BitmapListBox";
-            this.BitmapListBox.Size = new System.Drawing.Size(211, 124);
-            this.BitmapListBox.Sorted = true;
-            this.BitmapListBox.TabIndex = 8;
+            BitmapListBox.FormattingEnabled = true;
+            BitmapListBox.Location = new Point(370, 271);
+            BitmapListBox.Name = "BitmapListBox";
+            BitmapListBox.Size = new Size(185, 94);
+            BitmapListBox.Sorted = true;
+            BitmapListBox.TabIndex = 8;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(421, 335);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 20);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Bitmaps only";
+            label3.AutoSize = true;
+            label3.Location = new Point(368, 251);
+            label3.Name = "label3";
+            label3.Size = new Size(76, 15);
+            label3.TabIndex = 9;
+            label3.Text = "Bitmaps only";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.SelectFromAllImagesButton);
-            this.groupBox1.Controls.Add(this.AllImagesListBox);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Location = new System.Drawing.Point(11, 16);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(619, 301);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(SelectFromAllImagesButton);
+            groupBox1.Controls.Add(AllImagesListBox);
+            groupBox1.Controls.Add(pictureBox1);
+            groupBox1.Location = new Point(10, 12);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(542, 226);
+            groupBox1.TabIndex = 10;
+            groupBox1.TabStop = false;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 516);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.BitmapListBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.IconListBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Code sample";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(574, 387);
+            Controls.Add(groupBox1);
+            Controls.Add(label3);
+            Controls.Add(BitmapListBox);
+            Controls.Add(label2);
+            Controls.Add(IconListBox);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Code sample";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

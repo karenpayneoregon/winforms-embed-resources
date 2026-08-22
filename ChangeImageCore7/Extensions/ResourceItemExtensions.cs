@@ -4,19 +4,21 @@ namespace ChangeImageCore7.Extensions;
 
 public static class ResourceItemExtensions
 {
-    /// <summary>
-    /// Return resources of type Icon
-    /// </summary>
     /// <param name="sender"></param>
-    /// <returns>list of icons or an empty list</returns>
-    public static List<ResourceItem> Icons(this List<ResourceItem> sender) 
-        => sender.Where(item => item.IsIcon).ToList();
+    extension(List<ResourceItem> sender)
+    {
+        /// <summary>
+        /// Return resources of type Icon
+        /// </summary>
+        /// <returns>list of icons or an empty list</returns>
+        public List<ResourceItem> Icons() 
+            => sender.Where(item => item.IsIcon).ToList();
 
-    /// <summary>
-    /// Return resources of type Bitmap
-    /// </summary>
-    /// <param name="sender"></param>
-    /// <returns>list of bitmaps or an empty list</returns>        
-    public static List<ResourceItem> BitMaps(this List<ResourceItem> sender) 
-        => sender.Where(item => !item.IsIcon).ToList();
+        /// <summary>
+        /// Return resources of type Bitmap
+        /// </summary>
+        /// <returns>list of bitmaps or an empty list</returns>        
+        public List<ResourceItem> BitMaps() 
+            => sender.Where(item => !item.IsIcon).ToList();
+    }
 }

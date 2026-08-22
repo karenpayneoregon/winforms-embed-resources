@@ -28,145 +28,154 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-            this.AllImagesListBox = new System.Windows.Forms.ListBox();
-            this.AllImagesPictureBox = new System.Windows.Forms.PictureBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.IconListBox = new System.Windows.Forms.ListBox();
-            this.IconPictureBox = new System.Windows.Forms.PictureBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.BitmapImagesListBox = new System.Windows.Forms.ListBox();
-            this.BitmapPictureBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.AllImagesPictureBox)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.IconPictureBox)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BitmapPictureBox)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // AllImagesListBox
-            // 
-            this.AllImagesListBox.FormattingEnabled = true;
-            this.AllImagesListBox.ItemHeight = 20;
-            this.AllImagesListBox.Location = new System.Drawing.Point(6, 15);
-            this.AllImagesListBox.Name = "AllImagesListBox";
-            this.AllImagesListBox.Size = new System.Drawing.Size(214, 204);
-            this.AllImagesListBox.TabIndex = 1;
-            // 
-            // AllImagesPictureBox
-            // 
-            this.AllImagesPictureBox.Location = new System.Drawing.Point(247, 15);
-            this.AllImagesPictureBox.Name = "AllImagesPictureBox";
-            this.AllImagesPictureBox.Size = new System.Drawing.Size(320, 204);
-            this.AllImagesPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.AllImagesPictureBox.TabIndex = 2;
-            this.AllImagesPictureBox.TabStop = false;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(612, 273);
-            this.tabControl1.TabIndex = 3;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.AllImagesListBox);
-            this.tabPage1.Controls.Add(this.AllImagesPictureBox);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(604, 240);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "All images";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.IconListBox);
-            this.tabPage2.Controls.Add(this.IconPictureBox);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(604, 240);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Icon images";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // IconListBox
-            // 
-            this.IconListBox.FormattingEnabled = true;
-            this.IconListBox.ItemHeight = 20;
-            this.IconListBox.Location = new System.Drawing.Point(8, 6);
-            this.IconListBox.Name = "IconListBox";
-            this.IconListBox.Size = new System.Drawing.Size(214, 204);
-            this.IconListBox.TabIndex = 7;
-            // 
-            // IconPictureBox
-            // 
-            this.IconPictureBox.Location = new System.Drawing.Point(249, 6);
-            this.IconPictureBox.Name = "IconPictureBox";
-            this.IconPictureBox.Size = new System.Drawing.Size(320, 204);
-            this.IconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.IconPictureBox.TabIndex = 8;
-            this.IconPictureBox.TabStop = false;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.BitmapImagesListBox);
-            this.tabPage3.Controls.Add(this.BitmapPictureBox);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(604, 240);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Bitmap images";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // BitmapImagesListBox
-            // 
-            this.BitmapImagesListBox.FormattingEnabled = true;
-            this.BitmapImagesListBox.ItemHeight = 20;
-            this.BitmapImagesListBox.Location = new System.Drawing.Point(22, 18);
-            this.BitmapImagesListBox.Name = "BitmapImagesListBox";
-            this.BitmapImagesListBox.Size = new System.Drawing.Size(214, 204);
-            this.BitmapImagesListBox.TabIndex = 3;
-            // 
-            // BitmapPictureBox
-            // 
-            this.BitmapPictureBox.Location = new System.Drawing.Point(263, 18);
-            this.BitmapPictureBox.Name = "BitmapPictureBox";
-            this.BitmapPictureBox.Size = new System.Drawing.Size(320, 204);
-            this.BitmapPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BitmapPictureBox.TabIndex = 4;
-            this.BitmapPictureBox.TabStop = false;
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 273);
-            this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Code sample";
-            ((System.ComponentModel.ISupportInitialize)(this.AllImagesPictureBox)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.IconPictureBox)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BitmapPictureBox)).EndInit();
-            this.ResumeLayout(false);
+        AllImagesListBox = new ListBox();
+        AllImagesPictureBox = new PictureBox();
+        tabControl1 = new TabControl();
+        tabPage1 = new TabPage();
+        tabPage2 = new TabPage();
+        IconListBox = new ListBox();
+        IconPictureBox = new PictureBox();
+        tabPage3 = new TabPage();
+        BitmapImagesListBox = new ListBox();
+        BitmapPictureBox = new PictureBox();
+        ((System.ComponentModel.ISupportInitialize)AllImagesPictureBox).BeginInit();
+        tabControl1.SuspendLayout();
+        tabPage1.SuspendLayout();
+        tabPage2.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)IconPictureBox).BeginInit();
+        tabPage3.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)BitmapPictureBox).BeginInit();
+        SuspendLayout();
+        // 
+        // AllImagesListBox
+        // 
+        AllImagesListBox.FormattingEnabled = true;
+        AllImagesListBox.Location = new Point(5, 11);
+        AllImagesListBox.Margin = new Padding(3, 2, 3, 2);
+        AllImagesListBox.Name = "AllImagesListBox";
+        AllImagesListBox.Size = new Size(188, 154);
+        AllImagesListBox.TabIndex = 1;
+        // 
+        // AllImagesPictureBox
+        // 
+        AllImagesPictureBox.Location = new Point(216, 11);
+        AllImagesPictureBox.Margin = new Padding(3, 2, 3, 2);
+        AllImagesPictureBox.Name = "AllImagesPictureBox";
+        AllImagesPictureBox.Size = new Size(280, 153);
+        AllImagesPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+        AllImagesPictureBox.TabIndex = 2;
+        AllImagesPictureBox.TabStop = false;
+        // 
+        // tabControl1
+        // 
+        tabControl1.Controls.Add(tabPage1);
+        tabControl1.Controls.Add(tabPage2);
+        tabControl1.Controls.Add(tabPage3);
+        tabControl1.Dock = DockStyle.Fill;
+        tabControl1.Location = new Point(0, 0);
+        tabControl1.Margin = new Padding(3, 2, 3, 2);
+        tabControl1.Name = "tabControl1";
+        tabControl1.SelectedIndex = 0;
+        tabControl1.Size = new Size(536, 205);
+        tabControl1.TabIndex = 3;
+        // 
+        // tabPage1
+        // 
+        tabPage1.Controls.Add(AllImagesListBox);
+        tabPage1.Controls.Add(AllImagesPictureBox);
+        tabPage1.Location = new Point(4, 24);
+        tabPage1.Margin = new Padding(3, 2, 3, 2);
+        tabPage1.Name = "tabPage1";
+        tabPage1.Padding = new Padding(3, 2, 3, 2);
+        tabPage1.Size = new Size(528, 177);
+        tabPage1.TabIndex = 0;
+        tabPage1.Text = "All images";
+        tabPage1.UseVisualStyleBackColor = true;
+        // 
+        // tabPage2
+        // 
+        tabPage2.Controls.Add(IconListBox);
+        tabPage2.Controls.Add(IconPictureBox);
+        tabPage2.Location = new Point(4, 24);
+        tabPage2.Margin = new Padding(3, 2, 3, 2);
+        tabPage2.Name = "tabPage2";
+        tabPage2.Padding = new Padding(3, 2, 3, 2);
+        tabPage2.Size = new Size(528, 177);
+        tabPage2.TabIndex = 1;
+        tabPage2.Text = "Icon images";
+        tabPage2.UseVisualStyleBackColor = true;
+        // 
+        // IconListBox
+        // 
+        IconListBox.FormattingEnabled = true;
+        IconListBox.Location = new Point(7, 4);
+        IconListBox.Margin = new Padding(3, 2, 3, 2);
+        IconListBox.Name = "IconListBox";
+        IconListBox.Size = new Size(188, 154);
+        IconListBox.TabIndex = 7;
+        // 
+        // IconPictureBox
+        // 
+        IconPictureBox.Location = new Point(218, 4);
+        IconPictureBox.Margin = new Padding(3, 2, 3, 2);
+        IconPictureBox.Name = "IconPictureBox";
+        IconPictureBox.Size = new Size(280, 153);
+        IconPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+        IconPictureBox.TabIndex = 8;
+        IconPictureBox.TabStop = false;
+        // 
+        // tabPage3
+        // 
+        tabPage3.Controls.Add(BitmapImagesListBox);
+        tabPage3.Controls.Add(BitmapPictureBox);
+        tabPage3.Location = new Point(4, 24);
+        tabPage3.Margin = new Padding(3, 2, 3, 2);
+        tabPage3.Name = "tabPage3";
+        tabPage3.Padding = new Padding(3, 2, 3, 2);
+        tabPage3.Size = new Size(528, 177);
+        tabPage3.TabIndex = 2;
+        tabPage3.Text = "Bitmap images";
+        tabPage3.UseVisualStyleBackColor = true;
+        // 
+        // BitmapImagesListBox
+        // 
+        BitmapImagesListBox.FormattingEnabled = true;
+        BitmapImagesListBox.Location = new Point(19, 14);
+        BitmapImagesListBox.Margin = new Padding(3, 2, 3, 2);
+        BitmapImagesListBox.Name = "BitmapImagesListBox";
+        BitmapImagesListBox.Size = new Size(188, 154);
+        BitmapImagesListBox.TabIndex = 3;
+        // 
+        // BitmapPictureBox
+        // 
+        BitmapPictureBox.Location = new Point(230, 14);
+        BitmapPictureBox.Margin = new Padding(3, 2, 3, 2);
+        BitmapPictureBox.Name = "BitmapPictureBox";
+        BitmapPictureBox.Size = new Size(280, 153);
+        BitmapPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+        BitmapPictureBox.TabIndex = 4;
+        BitmapPictureBox.TabStop = false;
+        // 
+        // Form1
+        // 
+        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(536, 205);
+        Controls.Add(tabControl1);
+        Margin = new Padding(3, 2, 3, 2);
+        MaximizeBox = false;
+        MinimizeBox = false;
+        Name = "Form1";
+        StartPosition = FormStartPosition.CenterScreen;
+        Text = "Code sample";
+        ((System.ComponentModel.ISupportInitialize)AllImagesPictureBox).EndInit();
+        tabControl1.ResumeLayout(false);
+        tabPage1.ResumeLayout(false);
+        tabPage2.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)IconPictureBox).EndInit();
+        tabPage3.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)BitmapPictureBox).EndInit();
+        ResumeLayout(false);
 
     }
 

@@ -1,4 +1,6 @@
-﻿using ResourceLibrary.Models;
+﻿using System.Drawing;
+using ResourceLibrary.Models;
+#pragma warning disable CA1416
 
 namespace ResourceLibrary.Extensions;
 
@@ -22,6 +24,21 @@ public static class ResourceItemExtensions
         /// </summary>
         /// <returns>list of bitmaps or an empty list</returns>        
         public List<ResourceItem> BitMaps() 
-            => [.. sender.Where(item => !item.IsIcon)];
+            => sender.Where(item => !item.IsIcon).ToList();
+
+        /// <summary>
+        /// Retrieves an <see cref="System.Drawing.Icon"/> from the list of <see cref="ResourceLibrary.Models.ResourceItem"/> 
+        /// by matching the specified name.
+        /// </summary>
+        /// <param name="name">The name of the resource to search for.</param>
+        /// <returns>
+        /// An <see cref="System.Drawing.Icon"/> if a matching resource with the specified name exists and is of type Icon; 
+        /// otherwise, <c>null</c>.
+        /// </returns>
+        public Icon GetByName(string name)
+        {
+            var resourceItem = sender.FirstOrDefault(item => item.Name.Equals(name, StringComparison.OrdinalIgnoreCase) && item.IsIcon);
+            return resourceItem != null ? Icon.FromHandle(resourceItem.Image.GetHicon()) : null;
+        }
     }
 }
