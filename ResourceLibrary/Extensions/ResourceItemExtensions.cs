@@ -35,10 +35,25 @@ public static class ResourceItemExtensions
         /// An <see cref="System.Drawing.Icon"/> if a matching resource with the specified name exists and is of type Icon; 
         /// otherwise, <c>null</c>.
         /// </returns>
-        public Icon GetByName(string name)
+        public Icon GetIconByName(string name)
         {
             var resourceItem = sender.FirstOrDefault(item => item.Name.Equals(name, StringComparison.OrdinalIgnoreCase) && item.IsIcon);
             return resourceItem != null ? Icon.FromHandle(resourceItem.Image.GetHicon()) : null;
+        }
+
+        /// <summary>
+        /// Retrieves a <see cref="System.Drawing.Bitmap"/> from the list of <see cref="ResourceLibrary.Models.ResourceItem"/> 
+        /// by matching the specified name.
+        /// </summary>
+        /// <param name="name">The name of the resource to search for.</param>
+        /// <returns>
+        /// A <see cref="System.Drawing.Bitmap"/> if a matching resource with the specified name exists and is not of type Icon; 
+        /// otherwise, <c>null</c>.
+        /// </returns>
+        public Bitmap GetBitmapByName(string name)
+        {
+            var resourceItem = sender.FirstOrDefault(item => item.Name.Equals(name, StringComparison.OrdinalIgnoreCase) && !item.IsIcon);
+            return resourceItem?.Image;
         }
     }
 }
