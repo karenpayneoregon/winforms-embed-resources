@@ -9,7 +9,7 @@
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
 		<!--<LangVersion>9.0</LangVersion>-->
-		<TargetFramework>net6.0-windows</TargetFramework>
+		<TargetFramework>net10.0-windows</TargetFramework>
 		<UseWindowsForms>true</UseWindowsForms>
 	</PropertyGroup>
 

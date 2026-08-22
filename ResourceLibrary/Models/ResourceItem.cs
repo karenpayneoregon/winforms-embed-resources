@@ -1,6 +1,10 @@
 ﻿using System.Drawing;
 
 namespace ResourceLibrary.Models;
+
+/// <summary>
+/// Represents a resource item that contains metadata and content for an image resource.
+/// </summary>
 public class ResourceItem
 {
     /// <summary>
